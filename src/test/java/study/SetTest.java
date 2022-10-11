@@ -26,15 +26,14 @@ public class SetTest {
     @Test
     @DisplayName("size test")
     void size() {
-        int setSize = numbers.size();
-        assertThat(setSize).isEqualTo(3);
+        assertThat(numbers).hasSize(3);
     }
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 3})
     @DisplayName("contains test with value source")
     void contains(int number) {
-        assertThat(numbers.contains(number)).isTrue();
+        assertThat(numbers).contains(number);
     }
 
     @ParameterizedTest
